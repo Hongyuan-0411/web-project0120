@@ -1,0 +1,92 @@
+{
+  "sessionId": "session_1768836062196",
+  "userGoal": "认识钟表",
+  "learningFocus": "",
+  "musicStyle": "欢快",
+  "musicVoice": "男生",
+  "pictureBookStyle": "童话",
+  "characterType": "男生",
+  "decomposedData": {
+    "steps": [
+      {
+        "step_number": 1,
+        "step_name": "认识钟表的样子",
+        "step_description": "画面中乐乐在阳光明媚的房间里醒来，墙上挂着一个彩色的大钟表。钟表有圆圆的脸、两个指针（时针和分针），背景是蓝天白云。乐乐指着钟表开心地说：‘这是钟表，它会告诉我们时间！’音乐轻快活泼，男生边唱边说：‘圆圆脸蛋大又大，两根手指转圈圈，嘀嗒嘀嗒走不停，时间朋友就是它！’",
+        "learning_objective": "认识钟表的基本外形特征"
+      },
+      {
+        "step_number": 2,
+        "step_name": "认识钟面数字",
+        "step_description": "乐乐站在一个放大的钟面上，每个数字1到12都像小房子一样排列成一圈，数字用不同颜色标注。乐乐手拉数字1的小旗子说：‘这是1，它在这里！’每踩一个数字，就有光点亮起并发出柔和音效。男生唱歌：‘一二三四五六七，数字排队围成圈，小小脚步慢慢走，我们一起数一遍！’",
+        "learning_objective": "识别钟面上的数字1-12及其顺序"
+      },
+      {
+        "step_number": 3,
+        "step_name": "认识时针和分针",
+        "step_description": "乐乐拿着两个魔法棒（短粗的是时针，细长的是分针）在钟面上跳舞。他一边摆动一边说：‘短的是哥哥叫时针，走得很慢；长的是弟弟叫分针，跑得很快！’动画中两根指针分别用小脚走路和跑步来表现速度差异。男生唱：‘哥哥慢，弟弟快，兄弟俩一起转圈圈，配合默契不吵架，时间走得准又准！’",
+        "learning_objective": "区分时针与分针的功能和特点"
+      },
+      {
+        "step_number": 4,
+        "step_name": "整点时间认知",
+        "step_description": "乐乐坐在花园里，太阳高高挂在天空中央。钟表显示3点整，分针指向12，时针指向3。小鸟飞来说：‘3点了，该吃点心啦！’随后画面切换到早餐、午餐、晚餐三个场景，分别对应6点、12点、6点，每次都有相应活动提示。男生唱：‘分针站12，时针指几就几点，生活规律真快乐，每天都有好时间！’",
+        "learning_objective": "理解整点时间的读法及与日常生活的联系"
+      }
+    ],
+    "character_name": "乐乐",
+    "character_description": "开朗爱笑的小男孩，喜欢探索新事物",
+    "character_sheet": {
+      "name": "乐乐",
+      "type": "男生",
+      "age": "大约5岁",
+      "face": "圆脸，大眼睛，微笑",
+      "hair": "黑色短发，整齐刘海",
+      "outfit": "蓝色连帽卫衣，黄色背带裤",
+      "accessory": "红色小手表",
+      "main_colors": [
+        "蓝色",
+        "黄色"
+      ],
+      "reference_prompt": "圆脸大眼睛微笑男孩，黑色短发，穿蓝色连帽卫衣和黄色背带裤，戴红色小手表，配色明亮温暖"
+    }
+  },
+  "stepContents": [
+    {
+      "stepIndex": 0,
+      "lyrics": "[主歌]  \n乐乐起床笑哈哈  \n钟表墙上嘀嗒嗒  \n圆圆脸蛋大又大  \n两根指针转圈圈  \n\n[副歌]  \n嘀嗒嘀嗒走不停  \n时间朋友就是它  \n嘀嗒嘀嗒走不停  \n时间朋友就是它  \n\n[主歌]  \n乐乐指钟笑哈哈  \n我们一起认时间  \n圆圆脸蛋大又大  \n两根指针转圈圈",
+      "imageUrl": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/a8/20260119/d23adf3d/69718f93-8afd-47b7-bf1b-7e063e6e41ed2653296307.png?Expires=1769441861&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=iohl2ZbhDaD%2FjFshQUgzy99EncA%3D",
+      "audioUrl": null,
+      "lyricsError": null,
+      "imageError": null,
+      "audioError": "fetch failed: 404 {\"code\":1,\"message\":\"task not found\"}"
+    },
+    {
+      "stepIndex": 1,
+      "lyrics": "[主歌]  \n乐乐踩数字，1 2 3，  \n红黄蓝颜色，亮晶晶。  \n踩到几就喊几，叮叮叮，  \n一二三四五六七！  \n\n[副歌]  \n数字围成圈，走一圈，  \n乐乐笑嘻嘻，哒哒哒。  \n数字围成圈，走一圈，  \n一二三四五六七！  \n\n[主歌]  \n乐乐踩数字，8 9 10，  \n光脚丫跳舞，真开心！  \n踩到几就喊几，叮叮叮，  \n一二三四五六七！",
+      "imageUrl": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/41/20260119/d23adf3d/7c9e7d73-8cb9-4e19-a852-8a293a377465633496046.png?Expires=1769441881&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=KBsK4vtXwfc1%2BSgFtOs3YD6L668%3D",
+      "audioUrl": null,
+      "lyricsError": null,
+      "imageError": null,
+      "audioError": "fetch failed: 404 {\"code\":1,\"message\":\"task not found\"}"
+    },
+    {
+      "stepIndex": 2,
+      "lyrics": "[主歌]  \n乐乐跳舞叮叮咚  \n短针哥哥走慢慢  \n长针弟弟跑得快  \n叮叮咚，跑得快  \n\n[副歌]  \n哥哥慢，弟弟快  \n一起转圈真可爱  \n哥哥慢，弟弟快  \n时间准准不乱来  \n\n[主歌]  \n乐乐跳舞叮叮咚  \n短针哥哥走慢慢  \n长针弟弟跑得快  \n叮叮咚，跑得快",
+      "imageUrl": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/9c/20260119/d23adf3d/13c22ba9-699e-484d-8ee6-205c86af71c01445748903.png?Expires=1769441900&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=0rIqBq8lehO7yMFuGZ4TjI5qAF4%3D",
+      "audioUrl": null,
+      "lyricsError": null,
+      "imageError": null,
+      "audioError": "fetch failed: 404 {\"code\":1,\"message\":\"task not found\"}"
+    },
+    {
+      "stepIndex": 3,
+      "lyrics": "[主歌]  \n乐乐看钟表，指针真奇妙  \n分针站12，时针指几就几点  \n小鸟唱起来，3点吃点心咯  \n\n[副歌]  \n整点时间，真快乐呀  \n整点时间，笑哈哈  \n\n[主歌]  \n早餐6点，午餐12点  \n晚餐6点，天天都规律  \n\n[副歌]  \n整点时间，真快乐呀  \n整点时间，笑哈哈",
+      "imageUrl": null,
+      "audioUrl": null,
+      "lyricsError": null,
+      "imageError": "DashScope API error: {\"code\":\"Throttling.RateQuota\",\"message\":\"Requests rate limit exceeded, please try again later. For details, see: https://help.aliyun.com/zh/model-studio/error-code#rate-limit\",\"request_id\":\"aa3f7033-ee52-424c-908d-e38aebd6a206\"}",
+      "audioError": "fetch failed: 404 {\"code\":1,\"message\":\"task not found\"}"
+    }
+  ],
+  "createdAt": "2026-01-19T15:21:51.189Z"
+}

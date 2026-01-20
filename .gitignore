@@ -1,0 +1,17 @@
+node_modules/
+
+# Env / secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Large binaries (optional)
+*.vsix
