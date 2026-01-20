@@ -154,6 +154,7 @@ function getLyricsPrompt(step, characterName, musicStyle, musicVoice, stepNumber
    - 副歌（Chorus）：2-3行，可以适当重复
    - 适当使用重复的句子和词语，增强记忆点
    - 直接进入第一个主歌，不要前奏、间奏和结尾
+   - 使用标准普通话进行歌词，不能使用方言、英文、粤语等
 
 2. 歌词要求（简单、重复、有教育意义）：
    - **总歌词行数：8-15行（包括重复部分）**
