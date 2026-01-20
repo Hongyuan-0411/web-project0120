@@ -1036,10 +1036,12 @@
 
         <label>绘本风格</label>
         <select id="pictureBookStyle">
-          <option value="童话" selected>童话</option>
-          <option value="可爱">可爱</option>
-          <option value="科幻">科幻</option>
-          <option value="童年">童年</option>
+          <option value="柔和水彩扁平" selected>柔和水彩扁平（推荐）</option>
+          <option value="日系儿童绘本线稿">日系儿童绘本线稿</option>
+          <option value="纸雕拼贴风">纸雕拼贴风</option>
+          <option value="毛毡布艺手工风">毛毡布艺手工风</option>
+          <option value="蜡笔童画风">蜡笔童画风</option>
+          <option value="3D玩具公仔风">3D玩具公仔风</option>
           <option value="custom">自定义输入</option>
         </select>
         <input id="pictureBookStyleCustom" placeholder="请输入自定义绘本风格" style="display: none; margin-top: 6px;" />
@@ -2008,7 +2010,7 @@
     // 并行生成音乐和图片
     const [musicResult, imageResult] = await Promise.allSettled([
       generateMusicForStep(lyrics, step.step_name, musicStyle, musicVoice),
-      generateImageWithPrompt(imagePrompt),
+      generateImageWithPrompt(imagePrompt, pictureBookStyle),
     ]);
 
     // 保存到缓存
@@ -2115,15 +2117,49 @@
   }
 
   // 使用指定prompt生成图片
-  async function generateImageWithPrompt(imagePrompt) {
-    // 添加负面提示词，避免生成不安全或不符合常识的图片
-    const negativePrompt = `低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲。恐怖，黑暗，阴森，暴力，冲突，争吵，悲伤，哭泣，害怕，危险物品，怪物，鬼怪，恐怖角色，惊吓元素，焦虑，恐惧，扭曲，变形，不符合常识，奇怪的颜色，不符合现实，角色，人物，动物，卡通形象，抽象，超现实，艺术化，风格化`;
-    
+  async function generateImageWithPrompt(imagePrompt, pictureBookStyle) {
+    const stylePresets = {
+      '柔和水彩扁平': {
+        stylePrompt: 'soft watercolor wash, flat shapes, minimal details, clean outlines, warm pastel palette, gentle daylight, children picture book illustration',
+        negativePromptExtra: 'photorealistic, harsh contrast, dark vignette'
+      },
+      '日系儿童绘本线稿': {
+        stylePrompt: 'Japanese children picture book, clean line art, soft shading, warm light, simple background, gentle colors',
+        negativePromptExtra: 'photorealistic, cinematic lighting'
+      },
+      '纸雕拼贴风': {
+        stylePrompt: 'paper cutout collage, layered paper texture, handcrafted, simple shapes, warm light, children book page',
+        negativePromptExtra: 'photorealistic, glossy, complex texture'
+      },
+      '毛毡布艺手工风': {
+        stylePrompt: 'felt fabric craft, handmade children book style, soft felt texture, rounded shapes, warm light, minimal details',
+        negativePromptExtra: 'photorealistic skin, pores, wrinkles'
+      },
+      '蜡笔童画风': {
+        stylePrompt: 'crayon kids drawing, simple doodle outlines, naive childlike style, bright warm colors, clean background',
+        negativePromptExtra: 'photorealistic, hyper-detailed'
+      },
+      '3D玩具公仔风': {
+        stylePrompt: 'soft 3D toy style, matte plastic, non-photorealistic, kid-friendly proportions, warm soft light, simple background',
+        negativePromptExtra: 'photorealistic, uncanny, realistic skin'
+      },
+    };
+
+    const preset = stylePresets[pictureBookStyle] || { stylePrompt: '', negativePromptExtra: '' };
+
+    const antiCreepy = 'Bright warm daylight, friendly natural smile, cute rounded face, simple eyes with clear highlights (not hollow), stable perspective, medium shot, no wide-angle distortion, uncluttered background, no text.';
+
+    const globalNegative = 'horror, creepy, scary, dark, low light, dramatic shadows, uncanny, realistic skin, pores, wrinkles, lifeless eyes, distorted face, deformed, extra fingers, malformed hands, disfigured, text, watermark, logo, gore';
+
+    const prompt = `${imagePrompt}\n\n画风要求（严格遵守）：\n- ${preset.stylePrompt}\n- ${antiCreepy}`;
+
+    const negativePrompt = `${globalNegative}${preset.negativePromptExtra ? ', ' + preset.negativePromptExtra : ''}`;
+
     const resp = await fetch('/api/generate-image', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        prompt: imagePrompt, 
+      body: JSON.stringify({
+        prompt,
         size: '1664*928',
         negative_prompt: negativePrompt
       }),

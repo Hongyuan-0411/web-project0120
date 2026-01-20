@@ -942,6 +942,11 @@ async function handler(req, res) {
         watermark = false
       } = body;
 
+      const DEFAULT_NEGATIVE_PROMPT = 'horror, creepy, scary, dark, low light, dramatic shadows, uncanny, realistic skin, pores, wrinkles, lifeless eyes, distorted face, deformed, extra fingers, malformed hands, disfigured, text, watermark, logo, gore';
+      const effectiveNegativePrompt = (negative_prompt && String(negative_prompt).trim().length > 0)
+        ? String(negative_prompt)
+        : DEFAULT_NEGATIVE_PROMPT;
+
       if (!prompt || typeof prompt !== 'string' || prompt.trim().length === 0) {
         return send(res, 400, { error: 'prompt is required' });
       }
@@ -951,7 +956,7 @@ async function handler(req, res) {
         const response = await generateImageDashScope(
           prompt.trim(), 
           size, 
-          negative_prompt,
+          effectiveNegativePrompt,
           prompt_extend,
           watermark
         );
